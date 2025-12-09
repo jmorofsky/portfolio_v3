@@ -1,0 +1,34 @@
+{
+  "name": "portfolio_v3",
+  "version": "1.0.0",
+  "description": "Jason Morofsky's Portfolio",
+  "homepage": "https://jasonmorofsky.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmorofsky/portfolio_v3.git"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "author": "Jason Morofsky",
+  "type": "commonjs",
+  "main": "index.jsx",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "live-server .",
+    "dev": "concurrently \"npm run build\" \"npm run start\"",
+    "prod-build": "node prod-build.mjs"
+  },
+  "dependencies": {
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
+    "autoprefixer": "^10.4.22",
+    "concurrently": "^9.2.1",
+    "esbuild": "^0.27.1",
+    "live-server": "^1.2.2",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17"
+  }
+}
