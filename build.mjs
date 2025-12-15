@@ -31,6 +31,7 @@ const buildOptions = {
         postcssPlugin({ plugins: [tailwindcss] }),
     ],
     loader: { '.jsx': 'jsx', '.ttf': 'file', '.png': 'file', '.gif': 'dataurl' },
+    publicPath: '/dist/',
     minify: false
 }
 

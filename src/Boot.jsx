@@ -42,7 +42,7 @@ export default function Boot() {
         { text: 'CPU temperature: 58°C', delay: 50, class: 'success' },
         { text: 'Network latency: 87ms', delay: 50, class: 'success' },
         { text: '========================================', delay: 50 },
-        { text: 'SYSTEM READY', delay: 150, class: 'success' },
+        { text: 'SYSTEM READY', delay: 150, class: 'warning' },
         { text: 'Uptime: 0 days, 0:00:03' }
     ];
 
@@ -57,7 +57,7 @@ export default function Boot() {
             let lineClass;
             switch (line.class) {
                 case 'success':
-                    lineClass = 'text-green-200';
+                    lineClass = 'text-green-100';
                     break;
                 case 'warning':
                     lineClass = 'text-amber-200';
@@ -84,7 +84,7 @@ export default function Boot() {
 
     return (
         <div
-            className='m-4 absolute text-xs opacity-70 animate-fadeOut min-[500px]:text-sm'
+            className='m-4 absolute top-0 text-[9px] opacity-30 animate-fadeOut min-[430px]:text-xs min-[500px]:text-sm'
             style={{ animationDelay: '4.4s', fontFamily: 'monospace' }}
         >
             <>

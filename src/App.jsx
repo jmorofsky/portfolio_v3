@@ -1,21 +1,24 @@
 import { useState, useEffect } from 'react';
+import { Routes, Route, useNavigate } from 'react-router';
 import Intro from './Intro';
-import Boot from './Boot';
+import Home from './Home';
 
 
 export default function App() {
-    const [bootVisible, setBootVisible] = useState(true);
-    const [introVisible, setIntroVisible] = useState(false);
+    const navigate = useNavigate();
+
+    const [selectedContent, setSelectedContent] = useState(''); // home, about, work, projects, contact
 
     useEffect(() => {
-        setTimeout(() => { setBootVisible(false); setIntroVisible(true) }, 5200);
+        setTimeout(() => navigate('/home'), 5300);
     }, []);
-
-    if (bootVisible) return <Boot />;
-    if (introVisible) return <Intro />;
 
     return (
         <>
+            <Routes>
+                <Route path='/' element={<Intro />} />
+                <Route path='/home' element={<Home />} />
+            </Routes>
         </>
     );
 };

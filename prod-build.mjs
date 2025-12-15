@@ -31,6 +31,7 @@ await build({
         postcssPlugin({ plugins: [tailwindcss] }),
     ],
     loader: { '.jsx': 'jsx', '.ttf': 'file', '.png': 'file', '.gif': 'dataurl' },
+    publicPath: '/dist/',
     minify: true,
     sourcemap: false
 }).catch(() => process.exit(1));
