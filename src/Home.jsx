@@ -1,3 +1,3 @@
 export default function Home() {
-    return <div className='opacity-0 animate-fadeIn'>yuh</div>;
+    return <div className='opacity-0 animate-fadeIn'>Home</div>;
 };
