@@ -1,8 +1,12 @@
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router';
 import intro from './assets/intro.gif';
 import Boot from './Boot';
 
 
 export default function Intro() {
+    const navigate = useNavigate();
+
     const letters = [
         { text: 'P', delay: '3s' },
         { text: 'o', delay: '3.1s' },
@@ -14,6 +18,10 @@ export default function Intro() {
         { text: 'i', delay: '3.5s' },
         { text: 'o', delay: '3.2s' }
     ];
+
+    useEffect(() => {
+            setTimeout(() => navigate('/home'), 5300);
+        }, []);
 
     return (
         <>
