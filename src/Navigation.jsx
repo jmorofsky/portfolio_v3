@@ -14,6 +14,7 @@ const Item = (props) => {
                     :
                     'w-fit hover:text-amber-200'
             }
+            viewTransition
         >
             {path}
         </NavLink>

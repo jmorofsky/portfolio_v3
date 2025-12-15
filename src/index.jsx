@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <BrowserRouter>
-            <Link to='/home' className='absolute top-17 right-[10px] w-[50px] rotate-90'>
+            <Link to='/home' className='absolute top-17 right-[10px] w-[50px] rotate-90' viewTransition>
                 <img src={logo} />
             </Link>
 

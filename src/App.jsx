@@ -1,7 +1,11 @@
 import { Routes, Route, useLocation } from 'react-router';
 import Intro from './Intro';
-import Home from './Home';
 import Navigation from './Navigation';
+import Home from './Home';
+import About from './About';
+import Work from './Work';
+import Projects from './Projects';
+import Contact from './Contact';
 
 
 const Title = () => {
@@ -52,10 +56,10 @@ export default function App() {
             <Routes>
                 <Route path='/' element={<Intro />} />
                 <Route path='/home' element={<Home />} />
-                <Route path='/about' element={<Home />} />
-                <Route path='/work' element={<Home />} />
-                <Route path='/projects' element={<Home />} />
-                <Route path='/contact' element={<Home />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/work' element={<Work />} />
+                <Route path='/projects' element={<Projects />} />
+                <Route path='/contact' element={<Contact />} />
             </Routes>
         </>
     );
