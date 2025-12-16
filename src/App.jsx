@@ -1,4 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router';
+import { motion, AnimatePresence } from 'framer-motion';
 import Intro from './Intro';
 import Navigation from './Navigation';
 import Home from './Home';
@@ -7,6 +8,17 @@ import Work from './Work';
 import Projects from './Projects';
 import Contact from './Contact';
 
+
+const Animate = ({ children }) => (
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.4 }}
+  >
+    {children}
+  </motion.div>
+);
 
 const Title = () => {
     return (
@@ -46,6 +58,11 @@ export default function App() {
                     <div id='medium-stars' />
                     <div id='large-stars' />
 
+                    {/* more stars are needed to cover screen sizes > 2000px wide */}
+                    <div id='small-stars' className='absolute left-[2000px]' />
+                    <div id='medium-stars' className='absolute left-[2000px]' />
+                    <div id='large-stars' className='absolute left-[2000px]' />
+
                     <div className='m-12'>
                         <Title />
                         <Navigation />
@@ -53,14 +70,16 @@ export default function App() {
                 </div>
             }
 
-            <Routes>
-                <Route path='/' element={<Intro />} />
-                <Route path='/home' element={<Home />} />
-                <Route path='/about' element={<About />} />
-                <Route path='/work' element={<Work />} />
-                <Route path='/projects' element={<Projects />} />
-                <Route path='/contact' element={<Contact />} />
-            </Routes>
+            <AnimatePresence mode='wait'>
+                <Routes location={location} key={location.pathname}>
+                    <Route path='/' element={<Intro />} />
+                    <Route path='/home' element={<Animate><Home /></Animate>} />
+                    <Route path='/about' element={<Animate><About /></Animate>} />
+                    <Route path='/work' element={<Animate><Work /></Animate>} />
+                    <Route path='/projects' element={<Animate><Projects /></Animate>} />
+                    <Route path='/contact' element={<Animate><Contact /></Animate>} />
+                </Routes>
+            </AnimatePresence>
         </>
     );
 };

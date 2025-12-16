@@ -8,19 +8,19 @@ export default function Intro() {
     const navigate = useNavigate();
 
     const letters = [
-        { text: 'P', delay: '3s' },
-        { text: 'o', delay: '3.1s' },
-        { text: 'r', delay: '3.4s' },
-        { text: 't', delay: '3.25s' },
-        { text: 'f', delay: '3.1s' },
-        { text: 'o', delay: '3s' },
-        { text: 'l', delay: '3.6s' },
-        { text: 'i', delay: '3.5s' },
-        { text: 'o', delay: '3.2s' }
+        { text: 'P', delay: '4s' },
+        { text: 'o', delay: '4.1s' },
+        { text: 'r', delay: '4.4s' },
+        { text: 't', delay: '4.25s' },
+        { text: 'f', delay: '4.1s' },
+        { text: 'o', delay: '4s' },
+        { text: 'l', delay: '4.6s' },
+        { text: 'i', delay: '4.5s' },
+        { text: 'o', delay: '4.2s' }
     ];
 
     useEffect(() => {
-            setTimeout(() => navigate('/home'), 5300);
+            setTimeout(() => navigate('/home'), 6300);
         }, []);
 
     return (
@@ -30,12 +30,12 @@ export default function Intro() {
             <div className='w-fit m-auto mt-[20vh] opacity-0 animate-fadeIn'>
                 <img
                     className='m-auto animate-expand rounded-full mb-4'
-                    style={{ animationDelay: '4.5s' }}
+                    style={{ animationDelay: '5.5s' }}
                     src={intro}
                 />
 
                 <div className='flex gap-4 justify-center text-xl min-[400px]:text-2xl min-[560px]:text-4xl'>
-                    <p className='animate-fadeOut' style={{ animationDelay: '4s' }}>
+                    <p className='animate-fadeOut' style={{ animationDelay: '5s' }}>
                         Jason Morofsky
                     </p>
 
