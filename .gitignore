@@ -2,3 +2,5 @@ node_modules
 package-lock.json
 dist
 Inconsolata
+.env
+stats.json
