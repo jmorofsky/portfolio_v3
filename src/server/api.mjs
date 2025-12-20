@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import 'dotenv/config';
 import fetch from 'node-fetch';
 import { readFile, writeFile } from 'node:fs/promises';
@@ -6,6 +7,11 @@ import { readFile, writeFile } from 'node:fs/promises';
 
 const app = express();
 const port = 4000;
+const corsOptions = {
+    origin: 'http://localhost:8080',
+    optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 
 
 let activeRequestPromise = null;
@@ -35,20 +41,20 @@ async function loadExistingData() {
         };
     } catch {
         return {
-            "timestamp": 0,
-            "repositories": 0,
-            "languages": 0,
-            "commits": 0,
-            "deletions": 0,
-            "additions": 0,
-            "kb": 0
+            'timestamp': 0,
+            'Repositories': 0,
+            'Languages Used': 0,
+            'Commits': 0,
+            'Deletions': 0,
+            'Additions': 0,
+            'KB of Code': 0
         };
     };
 };
 
 function isStatsObjValid(statsObj) {
-    const requiredKeys = ['timestamp', 'repositories', 'languages',
-        'commits', 'deletions', 'additions', 'kb'];
+    const requiredKeys = ['timestamp', 'Repositories', 'Languages Used',
+        'Commits', 'Deletions', 'Additions', 'KB of Code'];
 
     const hasAllKeys = requiredKeys.every(key =>
         Object.prototype.hasOwnProperty.call(statsObj, key)
@@ -140,17 +146,17 @@ async function getRepoCommitInfo(repo) {
 async function getNewStats() {
     const statsJson = await getNewStatsJson();
     if ('error' in statsJson) {
-        return statsJson;
+        return;
     };
 
     const completedObj = {
         'timestamp': null,
-        'repositories': null,
-        'languages': null,
-        'commits': null,
-        'deletions': null,
-        'additions': null,
-        'kb': null
+        'Repositories': null,
+        'Languages Used': null,
+        'Commits': null,
+        'Deletions': null,
+        'Additions': null,
+        'KB of Code': null
     };
 
     let languages = [];
@@ -175,12 +181,12 @@ async function getNewStats() {
     };
 
     completedObj.timestamp = Date.now();
-    completedObj.repositories = statsJson.length;
-    completedObj.languages = languages.length;
-    completedObj.commits = commits;
-    completedObj.deletions = deletions;
-    completedObj.additions = additions;
-    completedObj.kb = size;
+    completedObj['Repositories'] = statsJson.length;
+    completedObj['Languages Used'] = languages.length;
+    completedObj['Commits'] = commits;
+    completedObj['Deletions'] = deletions;
+    completedObj['Additions'] = additions;
+    completedObj['KB of Code'] = size;
 
     if (isStatsObjValid(completedObj)) {
         cachedData = completedObj;
@@ -199,7 +205,7 @@ app.get('/stats', async (req, res) => {
         res.send({ error: 'Invalid data detected.' });
 
     const now = Date.now();
-    const oneHourHasElapsed = false;
+    let oneHourHasElapsed = false;
     if (now - lastFetchTime > REFRESH_INTERVAL) oneHourHasElapsed = true;
 
     if (activeRequestPromise || !oneHourHasElapsed) return;

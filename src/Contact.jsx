@@ -3,14 +3,14 @@ export default function Contact() {
         <div className='flex flex-col gap-1 absolute bottom-px right-px m-14 font-bold items-end'>
             <a
                 href='https://www.linkedin.com/in/jason-morofsky/'
-                className='hover:text-amber-200 hover:text-lg w-fit'
+                className='hover:text-gold hover:text-lg w-fit'
                 style={{ transition: 'all 0.33s' }}
             >LinkedIn ↗
             </a>
 
             <a
                 href='https://github.com/jmorofsky/'
-                className='hover:text-amber-200 hover:text-lg w-fit'
+                className='hover:text-gold hover:text-lg w-fit'
                 style={{ transition: 'all 0.33s' }}
             >
                 GitHub ↗
@@ -18,7 +18,7 @@ export default function Contact() {
 
             <a
                 href='mailto:contact@jasonmorofsky.com'
-                className='hover:text-amber-200 hover:text-lg w-fit'
+                className='hover:text-gold hover:text-lg w-fit'
                 style={{ transition: 'all 0.33s' }}
                 title='Email Me'
             >
@@ -27,7 +27,7 @@ export default function Contact() {
 
             <a
                 href="https://storage.googleapis.com/jasonmorofsky/JasonMorofsky'sResume.pdf"
-                className='hover:text-amber-200 hover:text-lg w-fit'
+                className='hover:text-gold hover:text-lg w-fit'
                 style={{ transition: 'all 0.33s' }}
             >
                 Resume ↓

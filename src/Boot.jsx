@@ -77,7 +77,7 @@ export default function Boot() {
                     lineClass = 'text-green-100';
                     break;
                 case 'warning':
-                    lineClass = 'text-amber-200';
+                    lineClass = 'text-gold';
                     break;
                 default:
                     lineClass = '';

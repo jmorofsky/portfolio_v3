@@ -10,9 +10,9 @@ const Item = (props) => {
             style={{ transition: 'all 0.33s' }}
             className={({ isActive }) =>
                 isActive ?
-                    'w-fit text-amber-200 before:content-[">"] before:absolute before:left-8 before:opacity-0 before:animate-fadeIn'
+                    'w-fit text-gold before:content-[">"] before:absolute before:left-8 before:opacity-0 before:animate-fadeIn'
                     :
-                    'w-fit hover:text-amber-200'
+                    'w-fit hover:text-gold'
             }
             viewTransition
         >
@@ -31,7 +31,7 @@ export default function Navigation() {
 
             <a
                 href='https://blog.jasonmorofsky.com'
-                className='w-fit hover:text-amber-200'
+                className='w-fit hover:text-gold'
                 style={{ transition: 'all 0.33s' }}
             >
                 Blog ↗

@@ -20,16 +20,18 @@ export default function Intro() {
     ];
 
     useEffect(() => {
-            setTimeout(() => navigate('/home'), 6300);
-        }, []);
+        const navTimeout = setTimeout(() => navigate('/home'), 6300);
+
+        return () => clearTimeout(navTimeout);
+    }, []);
 
     return (
         <>
             <Boot />
-            
+
             <div className='w-fit m-auto mt-[20vh] opacity-0 animate-fadeIn'>
                 <img
-                    className='m-auto animate-expand rounded-full mb-4'
+                    className='m-auto animate-fadeOut rounded-full mb-4'
                     style={{ animationDelay: '5.5s' }}
                     src={intro}
                 />
@@ -39,7 +41,7 @@ export default function Intro() {
                         Jason Morofsky
                     </p>
 
-                    <div className='font-thin text-amber-200'>
+                    <div className='font-thin text-gold'>
                         {letters.map(letter => (
                             <span
                                 key={letter.text + '-' + letter.delay}
