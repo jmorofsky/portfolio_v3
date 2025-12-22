@@ -36,7 +36,7 @@ const Title = () => {
                     Jason Morofsky
                 </span>
                 <span
-                    className='absolute left-px mt-px ml-12'
+                    className='absolute left-[2px] mt-px ml-12'
                     style={{ color: '#00f', animationDelay: '-0.33s' }}
                 >
                     Jason Morofsky

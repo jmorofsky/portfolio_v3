@@ -29,7 +29,11 @@ export default function Intro() {
         <div className='animate-fadeOut' style={{ animationDelay: '5.1s' }}>
             <BinaryMatrix />
 
-            <div className='w-fit m-auto mt-[20vh] opacity-0 animate-fadeIn bg-[#0D0D0D] p-16 rounded-4xl'>
+            {/* absolute positioning is used here so the center content isn't pushed down when /home renders */}
+            <div
+                className='w-fit absolute top-[20vh] left-[50%] opacity-0 animate-fadeIn bg-[#0D0D0D] p-16 rounded-3xl'
+                style={{ transform: 'translateX(-50%)' }}
+            >
                 <img
                     className='m-auto animate-expand rounded-full mb-4'
                     style={{ animationDelay: '4.75s' }}

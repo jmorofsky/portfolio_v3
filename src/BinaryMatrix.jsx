@@ -22,7 +22,7 @@ export default function BinaryMatrix() {
     }, []);
 
     return (
-        <div className='absolute inset-5 overflow-hidden wrap-anywhere opacity-20 text-neutral-500'>
+        <div className='absolute inset-3 overflow-hidden wrap-anywhere text-neutral-800'>
             {bits.map((value, index) => (
                 <span id='bit' key={index}>{value}</span>
             ))}
