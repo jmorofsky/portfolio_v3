@@ -117,6 +117,18 @@ a.active:before {
     left: 30px;
 }
 
+#content {
+    height: 95%;
+    line-height: 1.25;
+    overflow-y: scroll;
+    padding-left: 20px;
+    scrollbar-width: none;
+}
+
+#content::-webkit-scrollbar {
+    display: none;
+}
+
 #content * span {
     color: var(--color-gold);
 }
