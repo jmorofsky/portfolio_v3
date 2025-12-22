@@ -1,43 +1,43 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import intro from './assets/intro.gif';
-import Boot from './Boot';
+import BinaryMatrix from './BinaryMatrix';
 
 
 export default function Intro() {
     const navigate = useNavigate();
 
     const letters = [
-        { text: 'P', delay: '4s' },
-        { text: 'o', delay: '4.1s' },
-        { text: 'r', delay: '4.4s' },
-        { text: 't', delay: '4.25s' },
-        { text: 'f', delay: '4.1s' },
-        { text: 'o', delay: '4s' },
-        { text: 'l', delay: '4.6s' },
-        { text: 'i', delay: '4.5s' },
-        { text: 'o', delay: '4.2s' }
+        { text: 'P', delay: '3.5s' },
+        { text: 'o', delay: '3.6s' },
+        { text: 'r', delay: '3.9s' },
+        { text: 't', delay: '3.75s' },
+        { text: 'f', delay: '3.6s' },
+        { text: 'o', delay: '3.5s' },
+        { text: 'l', delay: '4.1s' },
+        { text: 'i', delay: '4s' },
+        { text: 'o', delay: '3.7s' }
     ];
 
     useEffect(() => {
-        const navTimeout = setTimeout(() => navigate('/home'), 6300);
+        const navTimeout = setTimeout(() => navigate('/home'), 5400);
 
         return () => clearTimeout(navTimeout);
     }, []);
 
     return (
-        <>
-            <Boot />
+        <div className='animate-fadeOut' style={{ animationDelay: '5.1s' }}>
+            <BinaryMatrix />
 
-            <div className='w-fit m-auto mt-[20vh] opacity-0 animate-fadeIn'>
+            <div className='w-fit m-auto mt-[20vh] opacity-0 animate-fadeIn bg-[#0D0D0D] p-16 rounded-4xl'>
                 <img
-                    className='m-auto animate-fadeOut rounded-full mb-4'
-                    style={{ animationDelay: '5.5s' }}
+                    className='m-auto animate-expand rounded-full mb-4'
+                    style={{ animationDelay: '4.75s' }}
                     src={intro}
                 />
 
-                <div className='flex gap-4 justify-center text-xl min-[400px]:text-2xl min-[560px]:text-4xl'>
-                    <p className='animate-fadeOut' style={{ animationDelay: '5s' }}>
+                <div className='mt-6 flex gap-4 justify-center text-xl min-[400px]:text-2xl min-[560px]:text-4xl'>
+                    <p className='animate-fadeOut' style={{ animationDelay: '4.3s' }}>
                         Jason Morofsky
                     </p>
 
@@ -54,6 +54,6 @@ export default function Intro() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
