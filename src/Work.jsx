@@ -71,14 +71,15 @@ export default function Work() {
                 <p className='text-right font-bold'>September 2021 - August 2022</p>
 
                 <ul className='mt-4 flex flex-col gap-2 w-xs list-[square]'>
-                    <li>Collaborated with the development team to <span>triage stories</span> and <span>create
-                        comprehensive testing plans.</span>
+                    <li>
+                        <span>Triaged</span> stories and created comprehensive <span>testing plans.</span>
                     </li>
-                    <li>Helped create a suite of <span>automated test cases</span> using Postman, greatly increasing
-                        testing coverage while reducing manual testing load.
+                    <li>
+                        Helped create a suite of <span>automated test cases</span> using Postman, greatly
+                        increasing testing coverage while reducing manual load.
                     </li>
-                    <li>Each sprint, executed <span>smoke</span> and <span>regression tests,</span> as well as
-                        test cases created for <span>new user stories.</span>
+                    <li>
+                        Each sprint, executed <span>smoke</span> and <span>regression</span> tests.
                     </li>
                 </ul>
             </div>
