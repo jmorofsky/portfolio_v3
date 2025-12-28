@@ -1,68 +1,73 @@
 import Statistics from './Statistics';
+import ScrollArrow from './ScrollArrow';
 
 
 export default function About() {
     const headingClass = 'w-[200px] border-b border-neutral-500 text-xl'
 
     return (
-        <div id='content' className='absolute right-px top-px mt-4 flex flex-col items-end gap-6'>
-            <p className={headingClass}>Education</p>
+        <>
+            <ScrollArrow />
 
-            <div className='mx-12 mb-12'>
-                <h1 className='text-3xl font-thin'>Florida Polytechnic University</h1>
-                <p className='text-right'>Bachelor of Science, Computer Science</p>
-                <p className='text-right font-bold'>2021</p>
+            <div id='content' className='absolute right-px top-px mt-4 flex flex-col items-end gap-6'>
+                <p className={headingClass}>Education</p>
 
-                <div className='flex flex-col items-end mt-4'>
-                    <ul className='w-xs'>
-                        <li className='list-[square] mb-2'>
-                            <span>Coursework</span> including Software Engineering, Database, Object-oriented
-                            Programming, Data Structures, and Algorithms
-                        </li>
+                <div className='mx-12 mb-12'>
+                    <h1 className='text-3xl font-thin'>Florida Polytechnic University</h1>
+                    <p className='text-right'>Bachelor of Science, Computer Science</p>
+                    <p className='text-right font-bold'>2021</p>
 
-                        <li className='list-[square]'>
-                            Competed as a <span>player and coach</span> in varsity Rainbow Six: Siege esports
-                        </li>
-                    </ul>
+                    <div className='flex flex-col items-end mt-4'>
+                        <ul className='w-xs'>
+                            <li className='list-[square] mb-2'>
+                                <span>Coursework</span> including Software Engineering, Database, Object-oriented
+                                Programming, Data Structures, and Algorithms
+                            </li>
+
+                            <li className='list-[square]'>
+                                Competed as a <span>player and coach</span> in varsity Rainbow Six: Siege esports
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
+                <div className='mx-12 mb-12'>
+                    <h1 className='text-3xl font-thin'>Coral Glades High School</h1>
+                    <p className='text-right'>Coral Springs, FL</p>
+                    <p className='text-right font-bold'>2017</p>
+                </div>
+
+
+                <p className={headingClass}>Certifications</p>
+
+                <div className='mx-12'>
+                    <h1 className='text-3xl font-thin text-right'>ISC2 CC</h1>
+                    <a
+                        href='https://drive.google.com/file/d/1jfmA-c6MTHO63ZFA4x5JojRKjbtaiH3y/'
+                        className='text-right hover:text-gold'
+                        style={{ transition: 'all 0.33s' }}
+                    >
+                        Verification ↗
+                    </a>
+                    <p className='text-right font-bold'>March 2024</p>
+                </div>
+
+                <div className='mx-12 mb-12 flex flex-col items-end'>
+                    <h1 className='text-3xl font-thin text-right'>CompTIA A+</h1>
+                    <a
+                        href='https://drive.google.com/file/d/14gXlEM-R71Q-qzi-ZTi-k_GkOap-5skG/'
+                        className='text-right hover:text-gold'
+                        style={{ transition: 'all 0.33s' }}
+                    >
+                        Verification ↗
+                    </a>
+                    <p className='text-right font-bold'>June 2023</p>
+                </div>
+
+
+                <p className={headingClass}>GitHub Stats</p>
+                <Statistics />
             </div>
-
-            <div className='mx-12 mb-12'>
-                <h1 className='text-3xl font-thin'>Coral Glades High School</h1>
-                <p className='text-right'>Coral Springs, FL</p>
-                <p className='text-right font-bold'>2017</p>
-            </div>
-
-
-            <p className={headingClass}>Certifications</p>
-
-            <div className='mx-12'>
-                <h1 className='text-3xl font-thin text-right'>ISC2 CC</h1>
-                <a
-                    href='https://drive.google.com/file/d/1jfmA-c6MTHO63ZFA4x5JojRKjbtaiH3y/'
-                    className='text-right hover:text-gold'
-                    style={{ transition: 'all 0.33s' }}
-                >
-                    Verification ↗
-                </a>
-                <p className='text-right font-bold'>March 2024</p>
-            </div>
-
-            <div className='mx-12 mb-12 flex flex-col items-end'>
-                <h1 className='text-3xl font-thin text-right'>CompTIA A+</h1>
-                <a
-                    href='https://drive.google.com/file/d/14gXlEM-R71Q-qzi-ZTi-k_GkOap-5skG/'
-                    className='text-right hover:text-gold'
-                    style={{ transition: 'all 0.33s' }}
-                >
-                    Verification ↗
-                </a>
-                <p className='text-right font-bold'>June 2023</p>
-            </div>
-
-
-            <p className={headingClass}>GitHub Stats</p>
-            <Statistics />
-        </div>
+        </>
     );
 };
