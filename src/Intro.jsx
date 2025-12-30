@@ -40,7 +40,7 @@ export default function Intro() {
                     src={intro}
                 />
 
-                <div className='mt-6 flex gap-4 justify-center text-xl min-[400px]:text-2xl min-[560px]:text-4xl'>
+                <div className='mt-6 flex gap-4 justify-center text-xl text-nowrap min-[400px]:text-2xl min-[560px]:text-4xl'>
                     <p className='animate-fadeOut' style={{ animationDelay: '4.3s' }}>
                         Jason Morofsky
                     </p>

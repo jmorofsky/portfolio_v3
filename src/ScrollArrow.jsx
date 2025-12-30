@@ -5,7 +5,7 @@ export default function ScrollArrow() {
     const [scrollStarted, setScrollStarted] = useState(false);
     const [scrollFinished, setScrollFinished] = useState(false);
     const [arrowClass, setArrowClass] = useState(
-        'absolute bottom-px right-2 text-2xl text-gold animate-bounce'
+        'absolute bottom-px right-2 text-2xl text-gold animate-bounce max-[520px]:opacity-0'
     );
 
     useEffect(() => {

@@ -10,22 +10,25 @@ import Contact from './Contact';
 
 
 const Animate = ({ children }) => (
-  <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{ duration: 0.4 }}
-  >
-    {children}
-  </motion.div>
+    <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.4 }}
+    >
+        {children}
+    </motion.div>
 );
 
 const Title = () => {
     return (
         <>
-            <div className='text-5xl' id='name' >
+            <div
+                className='relative text-3xl min-[520px]:text-5xl text-nowrap w-fit max-[400px]:mx-auto'
+                id='name'
+            >
                 <span
-                    className='absolute -left-px -mt-px ml-12'
+                    className='absolute -left-px -mt-px'
                     style={{ color: '#f00' }}
                 >
                     Jason Morofsky
@@ -36,13 +39,13 @@ const Title = () => {
                     Jason Morofsky
                 </span>
                 <span
-                    className='absolute left-[2px] mt-px ml-12'
+                    className='absolute left-[2px] mt-px'
                     style={{ color: '#00f', animationDelay: '-0.33s' }}
                 >
                     Jason Morofsky
                 </span>
             </div>
-            <p className='font-thin text-lg'>Software Engineer</p>
+            <p className='font-thin text-lg text-nowrap w-fit max-[400px]:mx-auto'>Software Engineer</p>
         </>
     );
 };
@@ -63,7 +66,7 @@ export default function App() {
                     <div id='medium-stars' className='absolute left-[2000px]' />
                     <div id='large-stars' className='absolute left-[2000px]' />
 
-                    <div className='m-12'>
+                    <div className='m-6 min-[400px]:m-12'>
                         <Title />
                         <Navigation />
                     </div>

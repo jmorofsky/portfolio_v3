@@ -111,14 +111,7 @@ body::after {
     mix-blend-mode: difference;
 }
 
-a.active:before {
-    content: "> ";
-    position: absolute;
-    left: 30px;
-}
-
 #content {
-    height: 95%;
     line-height: 1.25;
     overflow-y: scroll;
     padding-left: 20px;
