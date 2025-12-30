@@ -42,7 +42,7 @@ export default function Statistics() {
                 ))}
             </div>
 
-            <p className='absolute right-px text-right font-thin mt-2 mr-6'>
+            <p className='absolute right-px text-right font-thin mt-2 mr-2 min-[520px]:mr-6'>
                 These stats are updated automatically.<br />
                 Last update: {date}.
             </p>
