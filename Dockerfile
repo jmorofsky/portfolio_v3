@@ -13,9 +13,13 @@ FROM nginx:alpine
 
 RUN rm -rf /usr/share/nginx/html/*
 
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/dist /usr/share/nginx/html/dist
 
 COPY nginx.conf /etc/nginx/nginx.conf
+
+COPY index.html /usr/share/nginx/html
+
+COPY ./src/assets/favicon.ico /usr/share/nginx/html/src/assets/favicon.ico
 
 EXPOSE 80
 
