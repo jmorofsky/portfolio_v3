@@ -15,7 +15,7 @@ export default function BinaryMatrix() {
             canvas.height = window.innerHeight;
 
             const fontSize = 16;
-            const cols = Math.floor(canvas.width / fontSize);
+            const cols = Math.floor((canvas.width / fontSize) + 2);
             const rows = Math.floor(canvas.height / fontSize);
 
             gridRef.current = {

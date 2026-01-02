@@ -26,7 +26,7 @@ export default function Intro() {
     }, []);
 
     return (
-        <div className='animate-fadeOut m-auto w-full' style={{ animationDelay: '5.1s' }}>
+        <div className='animate-fadeOut m-auto w-full h-full' style={{ animationDelay: '5.1s' }}>
             <BinaryMatrix />
 
             <div

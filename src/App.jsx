@@ -65,7 +65,7 @@ export default function App() {
                 </div>
             }
 
-            <div className='overflow-y-scroll w-full' id='main'>
+            <div className='overflow-y-scroll w-full h-full' id='main'>
                 <AnimatePresence mode='wait'>
                     <Routes location={location} key={location.pathname}>
                         <Route path='/' element={<Intro />} />
