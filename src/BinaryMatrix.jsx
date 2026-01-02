@@ -69,8 +69,6 @@ export default function BinaryMatrix() {
     }, []);
 
     return (
-        <div>
-            <canvas ref={canvasRef} className='block w-full h-full' />
-        </div>
+        <canvas ref={canvasRef} className='block w-full h-full' />
     );
 };
