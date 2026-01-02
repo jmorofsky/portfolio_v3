@@ -31,7 +31,7 @@ const options = {
 
 async function loadExistingData() {
     try {
-        const jsonString = await readFile('./src/server/stats.json', { encoding: 'utf8' });
+        const jsonString = await readFile('./api/stats.json', { encoding: 'utf8' });
         const existingStats = await JSON.parse(jsonString);
 
         if (isStatsObjValid(existingStats)) {
@@ -192,7 +192,7 @@ async function getNewStats() {
         cachedData = completedObj;
 
         const jsonString = JSON.stringify(completedObj);
-        await writeFile('./src/server/stats.json', jsonString, { encoding: 'utf8' });
+        await writeFile('./api/stats.json', jsonString, { encoding: 'utf8' });
     };
 };
 

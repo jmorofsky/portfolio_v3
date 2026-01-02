@@ -23,7 +23,7 @@ const postcssPlugin = ({ plugins = [] } = {}) => {
 };
 
 await build({
-    entryPoints: ['src/index.jsx'],
+    entryPoints: ['public/index.jsx'],
     bundle: true,
     outfile: 'dist/bundle.js',
     inject: ['./react-shim.js'],

@@ -19,7 +19,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 COPY index.html /usr/share/nginx/html
 
-COPY ./src/assets/favicon.ico /usr/share/nginx/html/src/assets/favicon.ico
+COPY ./public/assets/favicon.ico /usr/share/nginx/html/public/assets/favicon.ico
 
 EXPOSE 80
 

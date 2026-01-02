@@ -15,7 +15,7 @@
   "scripts": {
     "build": "node build.mjs",
     "start": "live-server --entry-file=./index.html .",
-    "dev": "concurrently \"npm run build\" \"npm run start\" \"node ./src/server/api.mjs\"",
+    "dev": "concurrently \"npm run build\" \"npm run start\" \"node ./api/server.mjs\"",
     "prod-build": "node prod-build.mjs"
   },
   "dependencies": {

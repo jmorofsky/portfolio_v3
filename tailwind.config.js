@@ -1,7 +1,7 @@
 module.exports = {
   content: [
     "./index.html",
-    "./src/**/*.jsx"
+    "./public/**/*.jsx"
   ],
   purge: [],
   darkMode: false, // or 'media' or 'class'
