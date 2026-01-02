@@ -26,13 +26,14 @@ export default function Intro() {
     }, []);
 
     return (
-        <div className='animate-fadeOut' style={{ animationDelay: '5.1s' }}>
+        <div className='animate-fadeOut m-auto w-full' style={{ animationDelay: '5.1s' }}>
             <BinaryMatrix />
 
-            {/* absolute positioning is used here so the center content isn't pushed down when /home renders */}
             <div
-                className='w-fit absolute top-[20vh] left-[50%] opacity-0 animate-fadeIn bg-[#0D0D0D] p-16 rounded-3xl'
-                style={{ transform: 'translateX(-50%)' }}
+                className={/* absolute positioning is used here so the <img> can overflow */
+                    'absolute left-[50%] top-[50%] bg-[#0D0D0D] p-8 lg:p-16 rounded-3xl'
+                }
+                style={{ transform: 'translate(-50%, -50%)' }}
             >
                 <img
                     className='m-auto animate-expand rounded-full mb-4'
@@ -40,15 +41,15 @@ export default function Intro() {
                     src={intro}
                 />
 
-                <div className='mt-6 flex gap-4 justify-center text-xl text-nowrap min-[400px]:text-2xl min-[560px]:text-4xl'>
+                <div className='mt-6 flex gap-4 justify-center text-2xl text-nowrap sm:text-4xl'>
                     <p className='animate-fadeOut' style={{ animationDelay: '4.3s' }}>
                         Jason Morofsky
                     </p>
 
                     <div className='font-thin text-gold'>
-                        {letters.map(letter => (
+                        {letters.map((letter, index) => (
                             <span
-                                key={letter.text + '-' + letter.delay}
+                                key={index}
                                 className='animate-fadeOut'
                                 style={{ animationDelay: letter.delay }}
                             >

@@ -31,8 +31,8 @@ export default function Statistics() {
     }, []);
 
     return (
-        <div className='mr-4'>
-            <div className='grid grid-cols-3 gap-4 text-center'>
+        <div>
+            <div className='grid grid-cols-3 gap-4 text-center max-w-sm'>
                 {Object.entries(stats).map(([key, value]) => (
                     key != 'timestamp' &&
                     <div key={key} className='flex flex-col'>
@@ -42,7 +42,7 @@ export default function Statistics() {
                 ))}
             </div>
 
-            <p className='absolute right-px text-right font-thin mt-2 mr-2 min-[520px]:mr-6'>
+            <p className='lg:text-right text-sm sm:text-base font-thin mt-2'>
                 These stats are updated automatically.<br />
                 Last update: {date}.
             </p>

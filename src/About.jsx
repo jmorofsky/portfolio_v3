@@ -3,70 +3,73 @@ import ScrollArrow from './ScrollArrow';
 
 
 export default function About() {
-    const headingClass = 'w-[200px] border-b border-neutral-500 text-xl'
+    const divClass = 'flex flex-col lg:items-end';
+    const headingClass = 'text-left border-b border-neutral-500 text-xl w-fit mb-4'
+    const h1Class = 'lg:text-right text-xl md:text-3xl font-thin';
+    const aClass = 'lg:text-right hover:text-gold text-xs md:text-sm';
 
     return (
         <>
             <ScrollArrow />
 
-            <div id='content' className='absolute right-px top-100 min-[1000px]:top-px h-185 min-[1000px]:h-[95%] mt-4 flex flex-col items-end gap-6'>
-                <p className={headingClass}>Education</p>
+            <div
+                id='content'
+                className='flex flex-col lg:items-end gap-8'
+            >
+                <div className={divClass}>
+                    <p className={headingClass}>Education</p>
+                    <h1 className={h1Class}>
+                        Florida Polytechnic University
+                    </h1>
+                    <p className='lg:text-right'>Bachelor of Science, Computer Science</p>
+                    <p className='lg:text-right font-bold'>2021</p>
 
-                <div className='mx-2 min-[520px]:mx-12 mb-12'>
-                    <h1 className='text-xl min-[1200px]:text-3xl font-thin text-right'>Florida Polytechnic University</h1>
-                    <p className='text-right'>Bachelor of Science, Computer Science</p>
-                    <p className='text-right font-bold'>2021</p>
-
-                    <div className='flex flex-col items-end mt-4'>
-                        <ul className='min-[520px]:w-xs max-[520px]:text-sm'>
-                            <li className='list-[square] mb-2'>
-                                <span>Coursework</span> including Software Engineering, Database, Object-oriented
-                                Programming, Data Structures, and Algorithms
-                            </li>
-
-                            <li className='list-[square]'>
-                                Competed as a <span>player and coach</span> in varsity Rainbow Six: Siege esports
-                            </li>
-                        </ul>
-                    </div>
+                    <ul className='mt-4 flex flex-col gap-2 list-[square] text-sm sm:text-base max-w-md'>
+                        <li>
+                            <span>Coursework</span> including Software Engineering, Database, Object-oriented
+                            Programming, Data Structures, and Algorithms
+                        </li>
+                        <li>
+                            Competed as a <span>player and coach</span> in varsity Rainbow Six: Siege esports
+                        </li>
+                    </ul>
                 </div>
 
-                <div className='mx-2 min-[520px]:mx-12 mb-12'>
-                    <h1 className='text-xl min-[1200px]:text-3xl font-thin text-right'>Coral Glades High School</h1>
-                    <p className='text-right'>Coral Springs, FL</p>
-                    <p className='text-right font-bold'>2017</p>
+                <div>
+                    <h1 className={h1Class}>Coral Glades High School</h1>
+                    <p className='lg:text-right'>Coral Springs, FL</p>
+                    <p className='lg:text-right font-bold'>2017</p>
                 </div>
 
-
-                <p className={headingClass}>Certifications</p>
-
-                <div className='mx-2 min-[520px]:mx-12'>
-                    <h1 className='text-3xl font-thin text-right'>ISC2 CC</h1>
-                    <a
+                <div className={divClass}>
+                    <p className={headingClass}>Certifications</p>
+                    <h1 className={h1Class}>ISC2 CC</h1>
+                    <p className='lg:text-right'><a
                         href='https://drive.google.com/file/d/1jfmA-c6MTHO63ZFA4x5JojRKjbtaiH3y/'
-                        className='text-right hover:text-gold'
-                        style={{ transition: 'all 0.33s' }}
+                        className={aClass}
+                        style={{ transition: 'color 0.33s' }}
                     >
                         Verification ↗
-                    </a>
-                    <p className='text-right font-bold'>March 2024</p>
+                    </a></p>
+                    <p className='lg:text-right font-bold mt-1'>March 2024</p>
                 </div>
 
-                <div className='mx-2 min-[520px]:mx-12 mb-12 flex flex-col items-end'>
-                    <h1 className='text-3xl font-thin text-right'>CompTIA A+</h1>
-                    <a
+                <div>
+                    <h1 className={h1Class}>CompTIA A+</h1>
+                    <p className='lg:text-right'><a
                         href='https://drive.google.com/file/d/14gXlEM-R71Q-qzi-ZTi-k_GkOap-5skG/'
-                        className='text-right hover:text-gold'
-                        style={{ transition: 'all 0.33s' }}
+                        className={aClass}
+                        style={{ transition: 'color 0.33s' }}
                     >
                         Verification ↗
-                    </a>
-                    <p className='text-right font-bold'>June 2023</p>
+                    </a></p>
+                    <p className='lg:text-right font-bold mt-1'>June 2023</p>
                 </div>
 
-
-                <p className={headingClass}>GitHub Stats</p>
-                <Statistics />
+                <div className={divClass}>
+                    <p className={headingClass}>GitHub Stats</p>
+                    <Statistics />
+                </div>
             </div>
         </>
     );

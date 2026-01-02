@@ -24,7 +24,7 @@ const Title = () => {
     return (
         <>
             <div
-                className='relative text-3xl min-[520px]:text-5xl text-nowrap w-fit max-[400px]:mx-auto'
+                className='relative mx-auto lg:mx-0 text-4xl sm:text-5xl text-nowrap w-fit'
                 id='name'
             >
                 <span
@@ -45,7 +45,7 @@ const Title = () => {
                     Jason Morofsky
                 </span>
             </div>
-            <p className='font-thin text-lg text-nowrap w-fit max-[400px]:mx-auto'>Software Engineer</p>
+            <p className='font-thin text-lg text-nowrap w-fit mx-auto lg:mx-0'>Software Engineer</p>
         </>
     );
 };
@@ -54,35 +54,29 @@ export default function App() {
     const location = useLocation();
 
     return (
-        <>
+        <div className='h-full flex max-lg:flex-col lg:justify-between'>
             {location.pathname != '/' &&
-                <div className='opacity-0 animate-fadeIn'>
-                    <div id='small-stars' />
-                    <div id='medium-stars' />
-                    <div id='large-stars' />
-
-                    {/* more stars are needed to cover screen sizes > 2000px wide */}
-                    <div id='small-stars' className='absolute left-[2000px]' />
-                    <div id='medium-stars' className='absolute left-[2000px]' />
-                    <div id='large-stars' className='absolute left-[2000px]' />
-
-                    <div className='m-6 min-[400px]:m-12'>
-                        <Title />
-                        <Navigation />
-                    </div>
+                <div
+                    className='
+                        opacity-0 animate-fadeIn pt-6 pb-10 lg:ml-12'
+                >
+                    <Title />
+                    <Navigation />
                 </div>
             }
 
-            <AnimatePresence mode='wait'>
-                <Routes location={location} key={location.pathname}>
-                    <Route path='/' element={<Intro />} />
-                    <Route path='/home' element={<Animate><Home /></Animate>} />
-                    <Route path='/about' element={<Animate><About /></Animate>} />
-                    <Route path='/work' element={<Animate><Work /></Animate>} />
-                    <Route path='/projects' element={<Animate><Projects /></Animate>} />
-                    <Route path='/contact' element={<Animate><Contact /></Animate>} />
-                </Routes>
-            </AnimatePresence>
-        </>
+            <div className='overflow-y-scroll w-full' id='main'>
+                <AnimatePresence mode='wait'>
+                    <Routes location={location} key={location.pathname}>
+                        <Route path='/' element={<Intro />} />
+                        <Route path='/home' element={<Animate><Home /></Animate>} />
+                        <Route path='/about' element={<Animate><About /></Animate>} />
+                        <Route path='/work' element={<Animate><Work /></Animate>} />
+                        <Route path='/projects' element={<Animate><Projects /></Animate>} />
+                        <Route path='/contact' element={<Animate><Contact /></Animate>} />
+                    </Routes>
+                </AnimatePresence>
+            </div>
+        </div>
     );
 };

@@ -2,20 +2,22 @@ import ScrollArrow from './ScrollArrow';
 
 
 export default function Work() {
+    const ulClass = 'mt-4 flex flex-col gap-2 list-[square] text-sm sm:text-base max-w-md';
+
     return (
         <>
             <ScrollArrow />
 
             <div
                 id='content'
-                className='absolute right-px min-[1000px]:top-px top-95 h-188 min-[1000px]:h-[95%] flex flex-col items-end gap-8 mt-6 mx-2 min-[520px]:mx-12'
+                className='flex flex-col lg:items-end gap-8'
             >
                 <div>
-                    <h1 className='text-right text-3xl font-thin'>red violet</h1>
-                    <p className='text-right'>Software Engineer</p>
-                    <p className='text-right font-bold'>June 2025 - Present</p>
+                    <h1 className='lg:text-right text-3xl font-thin'>red violet</h1>
+                    <p className='lg:text-right'>Software Engineer</p>
+                    <p className='lg:text-right font-bold'>June 2025 - Present</p>
 
-                    <ul className='mt-4 flex flex-col gap-2 min-[520px]:w-xs max-[520px]:text-sm list-[square]'>
+                    <ul className={ulClass}>
                         <li>
                             Built and maintained complex Apache <span>Airflow DAGs</span> for
                             automated data pipeline orchestration.
@@ -42,10 +44,10 @@ export default function Work() {
                 </div>
 
                 <div>
-                    <p className='text-right'>Quality Assurance Analyst</p>
-                    <p className='text-right font-bold'>May 2024 - June 2025</p>
+                    <p className='lg:text-right'>Quality Assurance Analyst</p>
+                    <p className='lg:text-right font-bold'>May 2024 - June 2025</p>
 
-                    <ul className='mt-4 flex flex-col gap-2 min-[520px]:w-xs max-[520px]:text-sm list-[square]'>
+                    <ul className={ulClass}>
                         <li>
                             Rewrote existing <span>UI automation</span> test suite from the
                             ground up, fixing broken test cases and writing dozens of new ones,
@@ -75,11 +77,11 @@ export default function Work() {
                 </div>
 
                 <div>
-                    <h1 className='text-right text-3xl font-thin'>Airfind</h1>
-                    <p className='text-right'>Quality Assurance Analyst</p>
-                    <p className='text-right font-bold'>September 2021 - August 2022</p>
+                    <h1 className='lg:text-right text-3xl font-thin'>Airfind</h1>
+                    <p className='lg:text-right'>Quality Assurance Analyst</p>
+                    <p className='lg:text-right font-bold'>September 2021 - August 2022</p>
 
-                    <ul className='mt-4 flex flex-col gap-2 min-[520px]:w-xs max-[520px]:text-sm list-[square]'>
+                    <ul className={ulClass}>
                         <li>
                             <span>Triaged</span> stories and created comprehensive <span>testing plans.</span>
                         </li>
