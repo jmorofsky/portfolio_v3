@@ -1,0 +1,24 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "portfolio_v3 api",
+  "homepage": "https://jmorofsky.com/api",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmorofsky/portfolio_v3.git"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "author": "Jason Morofsky",
+  "type": "commonjs",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node ./src/server.mjs"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.2"
+  }
+}

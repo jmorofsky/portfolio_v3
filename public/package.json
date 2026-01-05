@@ -15,15 +15,11 @@
   "scripts": {
     "build": "node build.mjs",
     "start": "live-server --entry-file=./index.html .",
-    "dev": "concurrently \"npm run build\" \"npm run start\" \"node ./api/server.mjs\"",
+    "dev": "concurrently \"npm run build\" \"npm run start\"",
     "prod-build": "node prod-build.mjs"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.3",
-    "express": "^5.2.1",
     "motion": "^12.23.26",
-    "node-fetch": "^3.3.2",
     "react": "^19.2.1",
     "react-countup": "^6.5.3",
     "react-dom": "^19.2.1",

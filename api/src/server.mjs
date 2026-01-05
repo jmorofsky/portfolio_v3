@@ -2,16 +2,21 @@ import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
 import fetch from 'node-fetch';
-import { readFile, writeFile } from 'node:fs/promises';
+import { readFile, writeFile, readdir } from 'node:fs/promises';
 
 
 const app = express();
 const port = 4000;
 const corsOptions = {
-    origin: 'http://localhost:8080',
+    origin: 'https://jasonmorofsky.com',
     optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
+
+app.use((req, res, next) => {
+    console.log(`[DEBUG] Incoming Request: ${req.method} ${req.originalUrl}`);
+    next();
+});
 
 
 let activeRequestPromise = null;
@@ -31,15 +36,18 @@ const options = {
 
 async function loadExistingData() {
     try {
-        const jsonString = await readFile('./api/stats.json', { encoding: 'utf8' });
+        const jsonString = await readFile('./src/stats.json', { encoding: 'utf8' });
         const existingStats = await JSON.parse(jsonString);
 
         if (isStatsObjValid(existingStats)) {
             return existingStats;
         } else {
+            console.log('{WARN] Existing stats.json data is invalid.');
             throw new Error();
         };
-    } catch {
+    } catch (err) {
+        console.log(`[ERROR] Could not load existing stats.json: ${err}`);
+        console.log(`[DEBUG] Files in directory: ${await readdir('./src')}`);
         return {
             'timestamp': 0,
             'Repositories': 0,
@@ -145,7 +153,8 @@ async function getRepoCommitInfo(repo) {
 
 async function getNewStats() {
     const statsJson = await getNewStatsJson();
-    if ('error' in statsJson) {
+    if ('error' in statsJson || 'message' in statsJson) {
+        console.log('[ERROR] Could not fetch new stats JSON.');
         return;
     };
 
@@ -192,7 +201,7 @@ async function getNewStats() {
         cachedData = completedObj;
 
         const jsonString = JSON.stringify(completedObj);
-        await writeFile('./api/stats.json', jsonString, { encoding: 'utf8' });
+        await writeFile('./src/stats.json', jsonString, { encoding: 'utf8' });
     };
 };
 
@@ -221,5 +230,5 @@ app.get('/stats', async (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`API listening on port ${port}`);
+    console.log(`[INFO] API listening on port ${port}`);
 });

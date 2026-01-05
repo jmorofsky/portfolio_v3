@@ -1,7 +1,7 @@
-import { build } from 'esbuild';
-import postcss from 'postcss';
-import { readFile } from 'node:fs/promises';
 import tailwindcss from '@tailwindcss/postcss';
+import { readFile } from 'node:fs/promises';
+import postcss from 'postcss';
+import * as esbuild from 'esbuild';
 
 
 const postcssPlugin = ({ plugins = [] } = {}) => {
@@ -22,8 +22,8 @@ const postcssPlugin = ({ plugins = [] } = {}) => {
     };
 };
 
-await build({
-    entryPoints: ['public/index.jsx'],
+const buildOptions = {
+    entryPoints: ['src/index.jsx'],
     bundle: true,
     outfile: 'dist/bundle.js',
     inject: ['./react-shim.js'],
@@ -32,6 +32,19 @@ await build({
     ],
     loader: { '.jsx': 'jsx', '.ttf': 'file', '.png': 'file', '.gif': 'dataurl' },
     publicPath: '/dist/',
-    minify: true,
-    sourcemap: false
-}).catch(() => process.exit(1));
+    minify: false
+}
+
+async function runBuildAndWatch() {
+    try {
+        const ctx = await esbuild.context(buildOptions);
+        await ctx.watch();
+
+        console.log('[esbuild] watching for changes...');
+    } catch (err) {
+        console.error('[esbuild] build failed:', err);
+        process.exit(1);
+    }
+}
+
+runBuildAndWatch();

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import CountUp from 'react-countup';
 
 
-const getStats = () => fetch('http://localhost:4000/stats');
+const getStats = () => fetch('//api.jasonmorofsky.com/stats');
 
 export default function Statistics() {
     const [stats, setStats] = useState({
