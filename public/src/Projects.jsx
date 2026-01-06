@@ -70,12 +70,12 @@ export default function Projects() {
                 <div>
                     <h1 className={h1Class}>Website Monitor</h1>
                     <p className='lg:text-right'><a
-                        href='https://github.com/jmorofsky/website-monitor'
+                        href='https://github.com/jmorofsky/website-monitor_v2'
                         target='_blank'
                         className={aClass}
                         style={{ transition: 'color 0.33s' }}
                     >
-                        github.com/jmorofsky/website-monitor ↗
+                        github.com/jmorofsky/website-monitor_v2 ↗
                     </a></p>
                     <p className={pClass}>September 2025</p>
 
