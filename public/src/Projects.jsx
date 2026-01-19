@@ -16,6 +16,39 @@ export default function Projects() {
                 className='flex flex-col lg:items-end gap-8'
             >
                 <div>
+                    <h1 className={h1Class}>AI Summarizer</h1>
+                    <p className='lg:text-right'><a
+                        href='https://ai-summarizer-v2-three.vercel.app/'
+                        target='_blank'
+                        className={aClass}
+                        style={{ transition: 'color 0.33s' }}
+                    >
+                        ai-summarizer-v2-three.vercel.app ↗
+                    </a></p>
+                    <p className='lg:text-right'><a
+                        href='https://github.com/jmorofsky/ai_summarizer_v2'
+                        target='_blank'
+                        className={aClass}
+                        style={{ transition: 'color 0.33s' }}
+                    >
+                        github.com/jmorofsky/ai_summarizer_v2 ↗
+                    </a></p>
+                    <p className={pClass}>January 2026</p>
+
+                    <div className={divClass}>
+                        <p>A React- and Flask-based web app to <span>summarize</span> any text using OpenAI's <span>ChatGPT.</span></p>
+                        <p>You can view a live demo of the project&nbsp;
+                            <span><a
+                                href='https://ai-summarizer-v2-three.vercel.app/'
+                                target='_blank'
+                            >
+                                here ↗.
+                            </a></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div>
                     <h1 className={h1Class}>Portfolio</h1>
                     <p className='lg:text-right'><a
                         href='https://github.com/jmorofsky/portfolio_v3'
