@@ -28,7 +28,7 @@ export default function Contact() {
             </a>
 
             <a
-                href="https://storage.googleapis.com/jasonmorofsky/JasonMorofsky'sResume.pdf"
+                href="drive.google.com/file/d/1JVQcGZflOAuptEwQF_Wq2zxoZZrkmopj"
                 className={aClass}
                 style={{ transition: 'all 0.33s' }}
             >

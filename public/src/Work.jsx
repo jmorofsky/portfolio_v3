@@ -19,32 +19,27 @@ export default function Work() {
 
                     <ul className={ulClass}>
                         <li>
-                            Built and maintained complex Apache <span>Airflow DAGs</span> for
-                            automated data pipeline orchestration.
+                            Maintain and extend <span>Apache Airflow DAGs</span> processing 1,000–3,000 files per weekday (1 row to 30M+) for <span>hundreds of customers.</span>
                         </li>
                         <li>
-                            Developed <span>React dashboard</span> for real-time workflow
-                            monitoring and configuration management.
+                            Migrated Airflow from EC2 to <span>AWS MWAA</span> with file processing on <span>ECS,</span> removing OS and container patching and <span>auto-scaling</span> workers with demand.
                         </li>
                         <li>
-                            Processed <span>millions of records</span> each day according to
-                            detailed configuration and <span> billed customers</span> appropriately.
+                            Rewrote the operations dashboard from AngularJS to <span>React</span> for customer, profile, and billing configuration and <span>real-time job monitoring and control.</span>
                         </li>
                         <li>
-                            <span>Collaborated across teams</span> with QA, cloud operations, and
-                            other verticals to ensure maximum quality, uptime, and functionality.
+                            Migrated the test framework from Selenium to <span>Playwright,</span> cutting run time from ~20 to 11–12 minutes and flaky failures from 5–10% to zero.
                         </li>
+                        <li><span>Mentor</span> junior engineers and train new hires.</li>
+                        <li><span>Collaborated across teams</span> with QA, cloud operations, and other verticals to ensure maximum quality, uptime, and functionality.</li>
                         <li className='list-none mt-4'>
-                            <span>Full-stack</span> engineer developing a secure, large-scale
-                            <span> data processing system</span> handling PII using Airflow, a
-                            React frontend, and MySQL and PostgreSQL databases. AWS used for
-                            infrastructure deployment and monitoring.
+                            <span>Full-stack</span> engineer developing a secure, large-scale <span>data processing system</span> handling PII using Airflow, React, and MySQL. AWS (MWAA, ECS, S3, RDS, CloudWatch, Secrets Manager) is used for infrastructure deployment and monitoring.
                         </li>
                     </ul>
                 </div>
 
                 <div>
-                    <p className='lg:text-right'>Quality Assurance Analyst</p>
+                    <p className='lg:text-right'>Quality Assurance Engineer</p>
                     <p className='lg:text-right font-bold'>May 2024 - June 2025</p>
 
                     <ul className={ulClass}>
@@ -68,6 +63,7 @@ export default function Work() {
                             regression checklist, including UI, API, and system tests, saving
                             hours of manual testing time each release.
                         </li>
+                        <li>Helped team transition from a <span>waterfall to agile</span> SDLC.</li>
                         <li className='list-none mt-4'>
                             I was the sole manual and automation QA engineer for the product
                             <span> idiBATCH,</span> a data processing system which generates
@@ -83,14 +79,13 @@ export default function Work() {
 
                     <ul className={ulClass}>
                         <li>
-                            <span>Triaged</span> stories and created comprehensive <span>testing plans.</span>
+                            <span>Triaged</span> stories with developers and created comprehensive <span>test plans.</span>
                         </li>
                         <li>
-                            Helped create a suite of <span>automated test cases</span> using Postman, greatly
-                            increasing testing coverage while reducing manual load.
+                            Created a suite of <span>Postman API test cases,</span> greatly increasing testing coverage while reducing manual load.
                         </li>
                         <li>
-                            Each sprint, executed <span>smoke</span> and <span>regression</span> tests.
+                            Each sprint, executed <span>smoke</span> and <span>regression</span> tests, plus tests for new user stories.
                         </li>
                     </ul>
                 </div>

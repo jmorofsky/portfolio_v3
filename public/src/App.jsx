@@ -45,7 +45,7 @@ const Title = () => {
                     Jason Morofsky
                 </span>
             </div>
-            <p className='font-thin text-lg text-nowrap w-fit mx-auto lg:mx-0'>Software Engineer</p>
+            <p className='font-thin text-lg text-nowrap w-fit mx-auto lg:mx-0'>Full-Stack Software Engineer</p>
         </>
     );
 };

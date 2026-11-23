@@ -54,18 +54,6 @@ export default function About() {
                     <p className='lg:text-right font-bold mt-1'>March 2024</p>
                 </div>
 
-                <div>
-                    <h1 className={h1Class}>CompTIA A+</h1>
-                    <p className='lg:text-right'><a
-                        href='https://drive.google.com/file/d/14gXlEM-R71Q-qzi-ZTi-k_GkOap-5skG/'
-                        className={aClass}
-                        style={{ transition: 'color 0.33s' }}
-                    >
-                        Verification ↗
-                    </a></p>
-                    <p className='lg:text-right font-bold mt-1'>June 2023</p>
-                </div>
-
                 <div className={divClass}>
                     <p className={headingClass}>GitHub Stats</p>
                     <Statistics />
